@@ -7,7 +7,7 @@ import (
 	"go.uber.org/yarpc"
 	"go.uber.org/zap"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/service/sharddistributor/client/spectatorclient"
 )
 

@@ -31,7 +31,6 @@ import (
 	"github.com/stretchr/testify/mock"
 	"go.uber.org/mock/gomock"
 
-	"github.com/uber/cadence/.gen/go/indexer"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/definition"
 	"github.com/uber/cadence/common/dynamicconfig/dynamicproperties"
@@ -45,6 +44,7 @@ import (
 	pnt "github.com/uber/cadence/common/pinot"
 	"github.com/uber/cadence/common/service"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/indexer"
 )
 
 var (

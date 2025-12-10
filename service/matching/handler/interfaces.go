@@ -19,7 +19,7 @@
 // THE SOFTWARE.
 
 //go:generate mockgen -package $GOPACKAGE -source $GOFILE -destination interfaces_mock.go -package handler github.com/uber/cadence/service/matching/handler Handler
-//go:generate gowrap gen -g -p . -i Handler -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_handler_generated.go -v handler=GRPC -v package=matchingv1 -v path=github.com/uber/cadence/.gen/proto/matching/v1 -v prefix=Matching
+//go:generate gowrap gen -g -p . -i Handler -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_handler_generated.go -v handler=GRPC -v package=matchingv1 -v path=github.com/uber/cadence/gen/proto/matching/v1 -v prefix=Matching
 //go:generate gowrap gen -g -p ../../../.gen/go/matching/matchingserviceserver -i Interface -t ../../templates/thrift.tmpl -o ../wrappers/thrift/thrift_handler_generated.go -v handler=Thrift -v prefix=Matching
 
 package handler

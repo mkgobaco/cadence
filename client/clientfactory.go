@@ -28,13 +28,6 @@ import (
 	apiv1 "github.com/uber/cadence-idl/go/proto/api/v1"
 	"go.uber.org/yarpc/api/transport"
 
-	"github.com/uber/cadence/.gen/go/admin/adminserviceclient"
-	"github.com/uber/cadence/.gen/go/cadence/workflowserviceclient"
-	"github.com/uber/cadence/.gen/go/history/historyserviceclient"
-	"github.com/uber/cadence/.gen/go/matching/matchingserviceclient"
-	historyv1 "github.com/uber/cadence/.gen/proto/history/v1"
-	matchingv1 "github.com/uber/cadence/.gen/proto/matching/v1"
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/client/admin"
 	"github.com/uber/cadence/client/frontend"
 	"github.com/uber/cadence/client/history"
@@ -52,6 +45,13 @@ import (
 	"github.com/uber/cadence/common/metrics"
 	"github.com/uber/cadence/common/rpc"
 	"github.com/uber/cadence/common/service"
+	"github.com/uber/cadence/gen/go/admin/adminserviceclient"
+	"github.com/uber/cadence/gen/go/cadence/workflowserviceclient"
+	"github.com/uber/cadence/gen/go/history/historyserviceclient"
+	"github.com/uber/cadence/gen/go/matching/matchingserviceclient"
+	historyv1 "github.com/uber/cadence/gen/proto/history/v1"
+	matchingv1 "github.com/uber/cadence/gen/proto/matching/v1"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 )
 
 type (

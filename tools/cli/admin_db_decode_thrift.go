@@ -33,12 +33,12 @@ import (
 	"github.com/davecgh/go-spew/spew"
 	"github.com/urfave/cli/v2"
 
-	"github.com/uber/cadence/.gen/go/config"
-	"github.com/uber/cadence/.gen/go/history"
-	"github.com/uber/cadence/.gen/go/replicator"
-	"github.com/uber/cadence/.gen/go/shared"
-	"github.com/uber/cadence/.gen/go/sqlblobs"
 	"github.com/uber/cadence/common/codec"
+	"github.com/uber/cadence/gen/go/config"
+	"github.com/uber/cadence/gen/go/history"
+	"github.com/uber/cadence/gen/go/replicator"
+	"github.com/uber/cadence/gen/go/shared"
+	"github.com/uber/cadence/gen/go/sqlblobs"
 	"github.com/uber/cadence/tools/common/commoncli"
 )
 

@@ -10,7 +10,7 @@ import (
 	"go.uber.org/mock/gomock"
 	"go.uber.org/zap"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/service/sharddistributor/canary/processor"
 	"github.com/uber/cadence/service/sharddistributor/canary/processorephemeral"
 	"github.com/uber/cadence/service/sharddistributor/client/executorclient"

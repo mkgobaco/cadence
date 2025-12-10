@@ -26,9 +26,9 @@ import (
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func predicateTypeFuzzGenerator(t *types.PredicateType, c fuzz.Continue) {

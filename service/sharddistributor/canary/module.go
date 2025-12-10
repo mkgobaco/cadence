@@ -4,7 +4,7 @@ import (
 	"go.uber.org/fx"
 	"go.uber.org/yarpc"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/service/sharddistributor/canary/executors"
 	"github.com/uber/cadence/service/sharddistributor/canary/factory"
 	"github.com/uber/cadence/service/sharddistributor/canary/handler"

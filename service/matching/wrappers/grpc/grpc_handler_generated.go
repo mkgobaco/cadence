@@ -7,8 +7,8 @@ package grpc
 import (
 	"context"
 
-	matchingv1 "github.com/uber/cadence/.gen/proto/matching/v1"
 	"github.com/uber/cadence/common/types/mapper/proto"
+	matchingv1 "github.com/uber/cadence/gen/proto/matching/v1"
 	"github.com/uber/cadence/service/matching/handler"
 )
 

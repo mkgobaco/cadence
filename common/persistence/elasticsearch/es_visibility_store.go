@@ -34,8 +34,6 @@ import (
 	"github.com/cch123/elasticsql"
 	"github.com/valyala/fastjson"
 
-	"github.com/uber/cadence/.gen/go/indexer"
-	workflow "github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/definition"
@@ -48,6 +46,8 @@ import (
 	"github.com/uber/cadence/common/service"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/indexer"
+	workflow "github.com/uber/cadence/gen/go/shared"
 )
 
 type (

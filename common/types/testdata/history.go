@@ -23,9 +23,9 @@ package testdata
 import (
 	"github.com/pborman/uuid"
 
-	"github.com/uber/cadence/.gen/go/history"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/history"
 )
 
 var (

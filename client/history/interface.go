@@ -32,7 +32,7 @@ import (
 //go:generate gowrap gen -g -p . -i Client -t ../templates/retry.tmpl -o ../wrappers/retryable/history_generated.go -v client=History
 //go:generate gowrap gen -g -p . -i Client -t ../templates/metered.tmpl -o ../wrappers/metered/history_generated.go -v client=History
 //go:generate gowrap gen -g -p . -i Client -t ../templates/errorinjectors.tmpl -o ../wrappers/errorinjectors/history_generated.go -v client=History
-//go:generate gowrap gen -g -p . -i Client -t ../templates/grpc.tmpl -o ../wrappers/grpc/history_generated.go -v client=History -v package=historyv1 -v path=github.com/uber/cadence/.gen/proto/history/v1 -v prefix=History
+//go:generate gowrap gen -g -p . -i Client -t ../templates/grpc.tmpl -o ../wrappers/grpc/history_generated.go -v client=History -v package=historyv1 -v path=github.com/uber/cadence/gen/proto/history/v1 -v prefix=History
 //go:generate gowrap gen -g -p . -i Client -t ../templates/thrift.tmpl -o ../wrappers/thrift/history_generated.go -v client=History -v prefix=History
 //go:generate gowrap gen -g -p . -i Client -t ../templates/timeout.tmpl -o ../wrappers/timeout/history_generated.go -v client=History -v exclude=GetReplicationMessages|GetDLQReplicationMessages|CountDLQMessages|ReadDLQMessages|PurgeDLQMessages|MergeDLQMessages|GetCrossClusterTasks|GetFailoverInfo
 

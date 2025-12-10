@@ -27,11 +27,11 @@ import (
 
 	"go.uber.org/yarpc"
 
-	"github.com/uber/cadence/.gen/go/admin/adminserviceserver"
-	"github.com/uber/cadence/.gen/go/cadence/workflowserviceserver"
-	"github.com/uber/cadence/.gen/go/health"
-	"github.com/uber/cadence/.gen/go/health/metaserver"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/admin/adminserviceserver"
+	"github.com/uber/cadence/gen/go/cadence/workflowserviceserver"
+	"github.com/uber/cadence/gen/go/health"
+	"github.com/uber/cadence/gen/go/health/metaserver"
 	"github.com/uber/cadence/service/frontend/admin"
 	"github.com/uber/cadence/service/frontend/api"
 )

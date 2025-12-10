@@ -7,9 +7,9 @@ package grpc
 import (
 	"context"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/proto"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/service/sharddistributor/handler"
 )
 

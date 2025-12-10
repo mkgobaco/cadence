@@ -26,9 +26,9 @@ import (
 	"context"
 	"encoding/json"
 
-	"github.com/uber/cadence/.gen/go/indexer"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/messaging"
+	"github.com/uber/cadence/gen/go/indexer"
 )
 
 type Emitter DataEmitter

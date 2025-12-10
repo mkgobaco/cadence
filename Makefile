@@ -142,7 +142,7 @@ FRESH_ALL_SRC = $(shell \
 # if you require a fully up-to-date list, e.g. for shell commands, use FRESH_ALL_SRC instead.
 ALL_SRC := $(FRESH_ALL_SRC)
 # as lint ignores generated code, it can use the cached copy in all cases
-LINT_SRC := $(filter-out %_test.go ./.gen/%, $(ALL_SRC))
+LINT_SRC := $(filter-out %_test.go ./gen/%, $(ALL_SRC))
 
 # ====================================
 # $(BIN) targets
@@ -317,15 +317,15 @@ $(THRIFT_GEN): $(THRIFT_FILES) $(BIN)/thriftrw $(BIN)/thriftrw-plugin-yarpc | $(
 	$Q echo 'thriftrw for $(subst .build/,idls/thrift/,$@)...'
 	$Q $(BIN_PATH) $(BIN)/thriftrw \
 		--plugin=yarpc \
-		--pkg-prefix=$(PROJECT_ROOT)/.gen/go \
-		--out=.gen/go \
+		--pkg-prefix=$(PROJECT_ROOT)/gen/go \
+		--out=gen/go \
 		--no-recurse \
 		$(subst .build/,idls/thrift/,$@)
 	$Q touch $@
 
 PROTO_ROOT := proto
 # output location is defined by `option go_package` in the proto files, all must stay in sync with this
-PROTO_OUT := .gen/proto
+PROTO_OUT := gen/proto
 PROTO_FILES = $(shell find -L ./$(PROTO_ROOT) -name "*.proto" | grep -v "persistenceblobs" | grep -v public)
 PROTO_DIRS = $(sort $(dir $(PROTO_FILES)))
 
@@ -397,7 +397,7 @@ $(BUILD)/code-lint: $(LINT_SRC) $(BIN)/revive $(BIN)/nilaway | $(BUILD)
 	$Q echo "lint..."
 	$Q # non-optional vet checks.  unfortunately these are not currently included in `go test`'s default behavior.
 	$Q go vet -copylocks ./... ./common/archiver/gcloud/...
-	$Q $(BIN)/revive -config revive.toml -exclude './vendor/...' -exclude './.gen/...' -formatter stylish ./...
+	$Q $(BIN)/revive -config revive.toml -exclude './vendor/...' -exclude './gen/...' -formatter stylish ./...
 	$Q # look for go files with "//comments", and ignore "//go:build"-style directives ("grep -n" shows "file:line: //go:build" so the regex is a bit complex)
 	$Q bad="$$(find . -type f -name '*.go' -not -path './idls/*' | xargs grep -n -E '^\s*//\S' | grep -E -v '^[^:]+:[^:]+:\s*//[a-z]+:[a-z]+' || true)"; \
 		if [ -n "$$bad" ]; then \
@@ -734,14 +734,14 @@ cover_ndc_profile:
 
 $(COVER_ROOT)/cover.out: $(UNIT_COVER_FILE) $(INTEG_COVER_FILE_CASS) $(INTEG_COVER_FILE_MYSQL) $(INTEG_COVER_FILE_POSTGRES) $(INTEG_NDC_COVER_FILE_CASS) $(INTEG_NDC_COVER_FILE_MYSQL) $(INTEG_NDC_COVER_FILE_POSTGRES)
 	$Q echo "mode: atomic" > $(COVER_ROOT)/cover.out
-	cat $(UNIT_COVER_FILE) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_COVER_FILE_CASS) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_COVER_FILE_MYSQL) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_COVER_FILE_POSTGRES) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_NDC_COVER_FILE_CASS) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_NDC_COVER_FILE_MYSQL) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_NDC_COVER_FILE_POSTGRES) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
-	cat $(INTEG_COVER_FILE_ETCD) | grep -v "^mode: \w\+" | grep -vP ".gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(UNIT_COVER_FILE) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_COVER_FILE_CASS) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_COVER_FILE_MYSQL) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_COVER_FILE_POSTGRES) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_NDC_COVER_FILE_CASS) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_NDC_COVER_FILE_MYSQL) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_NDC_COVER_FILE_POSTGRES) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
+	cat $(INTEG_COVER_FILE_ETCD) | grep -v "^mode: \w\+" | grep -vP "gen|_generated|[Mm]ock[s]?" >> $(COVER_ROOT)/cover.out
 
 cover: $(COVER_ROOT)/cover.out
 	go tool cover -html=$(COVER_ROOT)/cover.out;

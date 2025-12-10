@@ -8,7 +8,6 @@ import (
 	"github.com/uber-go/tally"
 	"go.uber.org/fx"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/client/sharddistributorexecutor"
 	"github.com/uber/cadence/client/wrappers/grpc"
 	timeoutwrapper "github.com/uber/cadence/client/wrappers/timeout"
@@ -16,6 +15,7 @@ import (
 	"github.com/uber/cadence/common/log"
 	"github.com/uber/cadence/common/metrics"
 	"github.com/uber/cadence/common/types"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/service/sharddistributor/client/clientcommon"
 	"github.com/uber/cadence/service/sharddistributor/client/executorclient/metricsconstants"
 )

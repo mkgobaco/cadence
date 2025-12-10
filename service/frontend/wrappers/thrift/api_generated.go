@@ -7,8 +7,8 @@ package thrift
 import (
 	"context"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func (g APIHandler) CountWorkflowExecutions(ctx context.Context, CountRequest *shared.CountWorkflowExecutionsRequest) (cp1 *shared.CountWorkflowExecutionsResponse, err error) {

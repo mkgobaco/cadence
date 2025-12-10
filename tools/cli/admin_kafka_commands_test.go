@@ -34,8 +34,8 @@ import (
 	"go.uber.org/thriftrw/protocol/binary"
 	"go.uber.org/thriftrw/ptr"
 
-	"github.com/uber/cadence/.gen/go/indexer"
-	"github.com/uber/cadence/.gen/go/replicator"
+	"github.com/uber/cadence/gen/go/indexer"
+	"github.com/uber/cadence/gen/go/replicator"
 	"github.com/uber/cadence/client/admin"
 	"github.com/uber/cadence/common/persistence"
 	"github.com/uber/cadence/common/types"

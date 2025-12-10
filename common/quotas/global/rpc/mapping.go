@@ -28,11 +28,11 @@ import (
 	"testing"
 	"time"
 
-	"github.com/uber/cadence/.gen/go/history"
 	"github.com/uber/cadence/common/quotas/global/algorithm"
 	"github.com/uber/cadence/common/quotas/global/shared"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/history"
 )
 
 // funcs are ordered to match how an Update request flows:

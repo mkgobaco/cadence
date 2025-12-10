@@ -7,10 +7,10 @@ package thrift
 import (
 	"context"
 
-	"github.com/uber/cadence/.gen/go/history"
-	"github.com/uber/cadence/.gen/go/replicator"
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/history"
+	"github.com/uber/cadence/gen/go/replicator"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func (g ThriftHandler) CloseShard(ctx context.Context, Request *shared.CloseShardRequest) (err error) {

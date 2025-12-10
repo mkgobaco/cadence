@@ -25,9 +25,9 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	matchingv1 "github.com/uber/cadence/.gen/proto/matching/v1"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/testdata"
+	matchingv1 "github.com/uber/cadence/gen/proto/matching/v1"
 )
 
 func TestMatchingAddActivityTaskRequest(t *testing.T) {

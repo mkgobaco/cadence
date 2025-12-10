@@ -10,12 +10,12 @@ import (
 	"go.uber.org/fx"
 	"go.uber.org/zap"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/common/backoff"
 	"github.com/uber/cadence/common/clock"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 )
 
-//go:generate mockgen -package $GOPACKAGE -destination canary_client_mock.go github.com/uber/cadence/.gen/proto/sharddistributor/v1 ShardDistributorExecutorCanaryAPIYARPCClient
+//go:generate mockgen -package $GOPACKAGE -destination canary_client_mock.go github.com/uber/cadence/gen/proto/sharddistributor/v1 ShardDistributorExecutorCanaryAPIYARPCClient
 
 const (
 	pingInterval    = 1 * time.Second

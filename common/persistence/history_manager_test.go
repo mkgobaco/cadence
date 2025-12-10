@@ -30,13 +30,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/mock/gomock"
 
-	workflow "github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/codec"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/dynamicconfig/dynamicproperties"
 	"github.com/uber/cadence/common/log"
 	"github.com/uber/cadence/common/types"
+	workflow "github.com/uber/cadence/gen/go/shared"
 )
 
 func setUpMocksForHistoryV2Manager(t *testing.T) (*historyV2ManagerImpl, *MockHistoryStore, *MockPayloadSerializer, *codec.MockBinaryEncoder) {

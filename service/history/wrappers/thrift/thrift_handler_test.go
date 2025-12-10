@@ -27,12 +27,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"go.uber.org/mock/gomock"
 
-	"github.com/uber/cadence/.gen/go/health"
-	hist "github.com/uber/cadence/.gen/go/history"
-	"github.com/uber/cadence/.gen/go/replicator"
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/health"
+	hist "github.com/uber/cadence/gen/go/history"
+	"github.com/uber/cadence/gen/go/replicator"
+	"github.com/uber/cadence/gen/go/shared"
 	"github.com/uber/cadence/service/history/handler"
 )
 

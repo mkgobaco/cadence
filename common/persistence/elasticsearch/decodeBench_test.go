@@ -26,12 +26,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/definition"
 	es "github.com/uber/cadence/common/elasticsearch"
 	p "github.com/uber/cadence/common/persistence"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 var (

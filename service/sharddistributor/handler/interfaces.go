@@ -30,8 +30,8 @@ import (
 )
 
 //go:generate mockgen -package $GOPACKAGE -source $GOFILE -destination interfaces_mock.go
-//go:generate gowrap gen -g -p . -i Handler -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_handler_generated.go -v handler=GRPC -v package=sharddistributorv1 -v path=github.com/uber/cadence/.gen/proto/sharddistributor/v1 -v prefix=ShardDistributor
-//go:generate gowrap gen -g -p . -i Executor -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_executor_generated.go -v handler=ExecutorGRPC -v package=sharddistributorv1 -v path=github.com/uber/cadence/.gen/proto/sharddistributor/v1 -v prefix=ShardDistributorExecutor
+//go:generate gowrap gen -g -p . -i Handler -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_handler_generated.go -v handler=GRPC -v package=sharddistributorv1 -v path=github.com/uber/cadence/gen/proto/sharddistributor/v1 -v prefix=ShardDistributor
+//go:generate gowrap gen -g -p . -i Executor -t ../../templates/grpc.tmpl -o ../wrappers/grpc/grpc_executor_generated.go -v handler=ExecutorGRPC -v package=sharddistributorv1 -v path=github.com/uber/cadence/gen/proto/sharddistributor/v1 -v prefix=ShardDistributorExecutor
 //go:generate gowrap gen -g -p . -i Handler -t ../templates/metered.tmpl -o ../wrappers/metered/api_generated.go -v handler=Metrics
 //go:generate gowrap gen -g -p . -i Executor -t ../templates/metered.tmpl -o ../wrappers/metered/executor_generated.go -v handler=ExecutorMetrics
 

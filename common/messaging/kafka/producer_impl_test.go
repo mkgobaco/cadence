@@ -29,9 +29,9 @@ import (
 	"github.com/IBM/sarama/mocks"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/uber/cadence/.gen/go/indexer"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/log/testlogger"
+	"github.com/uber/cadence/gen/go/indexer"
 )
 
 func TestNewKafkaProducer(t *testing.T) {

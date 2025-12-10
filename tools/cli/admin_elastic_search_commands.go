@@ -34,12 +34,12 @@ import (
 	"github.com/olivere/elastic"
 	"github.com/urfave/cli/v2"
 
-	"github.com/uber/cadence/.gen/go/indexer"
 	"github.com/uber/cadence/common/clock"
 	"github.com/uber/cadence/common/elasticsearch"
 	es "github.com/uber/cadence/common/elasticsearch"
 	"github.com/uber/cadence/common/elasticsearch/esql"
 	"github.com/uber/cadence/common/tokenbucket"
+	"github.com/uber/cadence/gen/go/indexer"
 	"github.com/uber/cadence/tools/common/commoncli"
 )
 

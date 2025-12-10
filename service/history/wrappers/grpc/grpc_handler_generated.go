@@ -7,8 +7,8 @@ package grpc
 import (
 	"context"
 
-	historyv1 "github.com/uber/cadence/.gen/proto/history/v1"
 	"github.com/uber/cadence/common/types/mapper/proto"
+	historyv1 "github.com/uber/cadence/gen/proto/history/v1"
 	"github.com/uber/cadence/service/history/handler"
 )
 

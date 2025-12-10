@@ -27,13 +27,13 @@ import (
 	"github.com/golang/snappy"
 	"github.com/google/uuid"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/clock"
 	"github.com/uber/cadence/common/codec"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/log"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 type (

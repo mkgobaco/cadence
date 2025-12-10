@@ -7,9 +7,9 @@ package thrift
 import (
 	"context"
 
-	"github.com/uber/cadence/.gen/go/matching"
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/types/mapper/thrift"
+	"github.com/uber/cadence/gen/go/matching"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func (g ThriftHandler) AddActivityTask(ctx context.Context, AddRequest *matching.AddActivityTaskRequest) (err error) {

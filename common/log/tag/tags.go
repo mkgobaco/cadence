@@ -24,8 +24,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 // All logging tags are defined in this file.

@@ -15,7 +15,7 @@ import (
 
 	gomock "go.uber.org/mock/gomock"
 
-	shared "github.com/uber/cadence/.gen/go/shared"
+	shared "github.com/uber/cadence/gen/go/shared"
 )
 
 // MockVersionChecker is a mock of VersionChecker interface.

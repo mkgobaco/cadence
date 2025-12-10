@@ -28,13 +28,13 @@ import (
 	fuzz "github.com/google/gofuzz"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	cadence_errors "github.com/uber/cadence/common/errors"
 	"github.com/uber/cadence/common/testing/testdatagen"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/testutils"
 	"github.com/uber/cadence/common/types/testdata"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func TestCrossClusterTaskInfoConversion(t *testing.T) {

@@ -1,8 +1,8 @@
 package thrift
 
 import (
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/shared"
 )
 
 func FromPredicateType(t types.PredicateType) *shared.PredicateType {

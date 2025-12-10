@@ -28,7 +28,7 @@ import (
 	"github.com/golang/snappy"
 	"go.uber.org/thriftrw/protocol/binary"
 
-	"github.com/uber/cadence/.gen/go/sqlblobs"
+	"github.com/uber/cadence/gen/go/sqlblobs"
 )
 
 type snappyThriftDecoder struct{}

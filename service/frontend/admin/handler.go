@@ -31,7 +31,6 @@ import (
 
 	"github.com/google/uuid"
 
-	"github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/asyncworkflow/queueconfigapi"
 	"github.com/uber/cadence/common/backoff"
@@ -52,6 +51,7 @@ import (
 	"github.com/uber/cadence/common/resource"
 	"github.com/uber/cadence/common/service"
 	"github.com/uber/cadence/common/types"
+	"github.com/uber/cadence/gen/go/shared"
 	"github.com/uber/cadence/service/frontend/config"
 	"github.com/uber/cadence/service/frontend/validate"
 	"github.com/uber/cadence/service/history/execution"

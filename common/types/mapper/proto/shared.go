@@ -23,11 +23,11 @@ package proto
 import (
 	adminv1 "github.com/uber/cadence-idl/go/proto/admin/v1"
 
-	sharedv1 "github.com/uber/cadence/.gen/proto/shared/v1"
 	"github.com/uber/cadence/common"
 	"github.com/uber/cadence/common/constants"
 	"github.com/uber/cadence/common/persistence"
 	"github.com/uber/cadence/common/types"
+	sharedv1 "github.com/uber/cadence/gen/proto/shared/v1"
 )
 
 func FromHostInfo(t *types.HostInfo) *adminv1.HostInfo {

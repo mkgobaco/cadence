@@ -28,7 +28,6 @@ import (
 
 	esaws "github.com/olivere/elastic/aws/v4"
 
-	workflow "github.com/uber/cadence/.gen/go/shared"
 	"github.com/uber/cadence/common/config"
 	"github.com/uber/cadence/common/elasticsearch/bulk"
 	esc "github.com/uber/cadence/common/elasticsearch/client"
@@ -39,6 +38,7 @@ import (
 	"github.com/uber/cadence/common/log"
 	"github.com/uber/cadence/common/log/tag"
 	p "github.com/uber/cadence/common/persistence"
+	workflow "github.com/uber/cadence/gen/go/shared"
 )
 
 // NewGenericClient create a ES client

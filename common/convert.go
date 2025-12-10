@@ -25,7 +25,7 @@ import (
 
 	"go.uber.org/cadence/.gen/go/shared"
 
-	s "github.com/uber/cadence/.gen/go/shared"
+	s "github.com/uber/cadence/gen/go/shared"
 )
 
 // Returns a pointer to the given value.

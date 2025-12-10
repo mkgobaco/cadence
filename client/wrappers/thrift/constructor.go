@@ -21,14 +21,14 @@
 package thrift
 
 import (
-	"github.com/uber/cadence/.gen/go/admin/adminserviceclient"
-	"github.com/uber/cadence/.gen/go/cadence/workflowserviceclient"
-	"github.com/uber/cadence/.gen/go/history/historyserviceclient"
-	"github.com/uber/cadence/.gen/go/matching/matchingserviceclient"
 	"github.com/uber/cadence/client/admin"
 	"github.com/uber/cadence/client/frontend"
 	"github.com/uber/cadence/client/history"
 	"github.com/uber/cadence/client/matching"
+	"github.com/uber/cadence/gen/go/admin/adminserviceclient"
+	"github.com/uber/cadence/gen/go/cadence/workflowserviceclient"
+	"github.com/uber/cadence/gen/go/history/historyserviceclient"
+	"github.com/uber/cadence/gen/go/matching/matchingserviceclient"
 )
 
 type (

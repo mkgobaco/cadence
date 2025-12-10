@@ -9,10 +9,10 @@ import (
 
 	"go.uber.org/yarpc"
 
-	sharddistributorv1 "github.com/uber/cadence/.gen/proto/sharddistributor/v1"
 	"github.com/uber/cadence/client/sharddistributor"
 	"github.com/uber/cadence/common/types"
 	"github.com/uber/cadence/common/types/mapper/proto"
+	sharddistributorv1 "github.com/uber/cadence/gen/proto/sharddistributor/v1"
 )
 
 func (g sharddistributorClient) GetShardOwner(ctx context.Context, gp1 *types.GetShardOwnerRequest, p1 ...yarpc.CallOption) (gp2 *types.GetShardOwnerResponse, err error) {
